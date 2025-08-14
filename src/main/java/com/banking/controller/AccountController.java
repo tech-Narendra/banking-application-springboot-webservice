@@ -19,13 +19,13 @@ import com.banking.accountDTO.AccountDto;
 import com.banking.service.accountservice.AccontService;
 
 @RestController
-@RequestMapping("/banking/accounts")
+@RequestMapping("/banking")
 public class AccountController {
 	
 	@Autowired
 	AccontService accservice;
 	
-	@PostMapping
+	@PostMapping("/accounts")
 	public ResponseEntity<ResponseStructure<AccountDto>> save(@RequestBody AccountDto accdto) {
 		ResponseStructure<AccountDto> resp = new ResponseStructure<>(HttpStatus.CREATED.value(),"Account Created", accservice.createAccount(accdto));
 		return new ResponseEntity<ResponseStructure<AccountDto>>(resp,HttpStatus.CREATED);
