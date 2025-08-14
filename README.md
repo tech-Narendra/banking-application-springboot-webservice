@@ -23,7 +23,7 @@ This project demonstrates **Spring Boot REST APIs**, layered architecture, and i
 - **Spring Data JPA**
 - **MySQL**
 - **Maven**
-- **Lombok** *(optional for boilerplate reduction)*
+- **Lombok**
 
 ---
 
